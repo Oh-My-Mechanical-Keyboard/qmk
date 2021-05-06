@@ -1,0 +1,308 @@
+   1              		.cpu cortex-m4
+   2              		.eabi_attribute 27, 1
+   3              		.eabi_attribute 28, 1
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 4
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.file	"logo_reader.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.text.rgblight_toggle,"ax",%progbits
+  18              		.align	1
+  19              		.weak	rgblight_toggle
+  20              		.arch armv7e-m
+  21              		.syntax unified
+  22              		.thumb
+  23              		.thumb_func
+  24              		.fpu fpv4-sp-d16
+  26              	rgblight_toggle:
+  27              	.LFB3:
+  28              		.file 1 "quantum/rgb.h"
+   1:quantum/rgb.h **** /* Copyright 2017 Jack Humbert
+   2:quantum/rgb.h ****  *
+   3:quantum/rgb.h ****  * This program is free software: you can redistribute it and/or modify
+   4:quantum/rgb.h ****  * it under the terms of the GNU General Public License as published by
+   5:quantum/rgb.h ****  * the Free Software Foundation, either version 2 of the License, or
+   6:quantum/rgb.h ****  * (at your option) any later version.
+   7:quantum/rgb.h ****  *
+   8:quantum/rgb.h ****  * This program is distributed in the hope that it will be useful,
+   9:quantum/rgb.h ****  * but WITHOUT ANY WARRANTY; without even the implied warranty of
+  10:quantum/rgb.h ****  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  11:quantum/rgb.h ****  * GNU General Public License for more details.
+  12:quantum/rgb.h ****  *
+  13:quantum/rgb.h ****  * You should have received a copy of the GNU General Public License
+  14:quantum/rgb.h ****  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  15:quantum/rgb.h ****  */
+  16:quantum/rgb.h **** 
+  17:quantum/rgb.h **** #ifndef RGB_H
+  18:quantum/rgb.h **** #define RGB_H
+  19:quantum/rgb.h **** 
+  20:quantum/rgb.h **** __attribute__((weak))
+  21:quantum/rgb.h **** void rgblight_toggle(void) {};
+  29              		.loc 1 21 28 view -0
+  30              		.cfi_startproc
+  31              		@ args = 0, pretend = 0, frame = 0
+  32              		@ frame_needed = 0, uses_anonymous_args = 0
+  33              		@ link register save eliminated.
+  34              		.loc 1 21 29 view .LVU1
+  35 0000 7047     		bx	lr
+  36              		.cfi_endproc
+  37              	.LFE3:
+  39              		.section	.text.rgblight_step,"ax",%progbits
+  40              		.align	1
+  41              		.weak	rgblight_step
+  42              		.syntax unified
+  43              		.thumb
+  44              		.thumb_func
+  45              		.fpu fpv4-sp-d16
+  47              	rgblight_step:
+  48              	.LFB19:
+  49              		.cfi_startproc
+  50              		@ args = 0, pretend = 0, frame = 0
+  51              		@ frame_needed = 0, uses_anonymous_args = 0
+  52              		@ link register save eliminated.
+  53 0000 7047     		bx	lr
+  54              		.cfi_endproc
+  55              	.LFE19:
+  57              		.section	.text.rgblight_step_reverse,"ax",%progbits
+  58              		.align	1
+  59              		.weak	rgblight_step_reverse
+  60              		.syntax unified
+  61              		.thumb
+  62              		.thumb_func
+  63              		.fpu fpv4-sp-d16
+  65              	rgblight_step_reverse:
+  66              	.LFB21:
+  67              		.cfi_startproc
+  68              		@ args = 0, pretend = 0, frame = 0
+  69              		@ frame_needed = 0, uses_anonymous_args = 0
+  70              		@ link register save eliminated.
+  71 0000 7047     		bx	lr
+  72              		.cfi_endproc
+  73              	.LFE21:
+  75              		.section	.text.rgblight_increase_hue,"ax",%progbits
+  76              		.align	1
+  77              		.weak	rgblight_increase_hue
+  78              		.syntax unified
+  79              		.thumb
+  80              		.thumb_func
+  81              		.fpu fpv4-sp-d16
+  83              	rgblight_increase_hue:
+  84              	.LFB23:
+  85              		.cfi_startproc
+  86              		@ args = 0, pretend = 0, frame = 0
+  87              		@ frame_needed = 0, uses_anonymous_args = 0
+  88              		@ link register save eliminated.
+  89 0000 7047     		bx	lr
+  90              		.cfi_endproc
+  91              	.LFE23:
+  93              		.section	.text.rgblight_decrease_hue,"ax",%progbits
+  94              		.align	1
+  95              		.weak	rgblight_decrease_hue
+  96              		.syntax unified
+  97              		.thumb
+  98              		.thumb_func
+  99              		.fpu fpv4-sp-d16
+ 101              	rgblight_decrease_hue:
+ 102              	.LFB25:
+ 103              		.cfi_startproc
+ 104              		@ args = 0, pretend = 0, frame = 0
+ 105              		@ frame_needed = 0, uses_anonymous_args = 0
+ 106              		@ link register save eliminated.
+ 107 0000 7047     		bx	lr
+ 108              		.cfi_endproc
+ 109              	.LFE25:
+ 111              		.section	.text.rgblight_increase_sat,"ax",%progbits
+ 112              		.align	1
+ 113              		.weak	rgblight_increase_sat
+ 114              		.syntax unified
+ 115              		.thumb
+ 116              		.thumb_func
+ 117              		.fpu fpv4-sp-d16
+ 119              	rgblight_increase_sat:
+ 120              	.LFB27:
+ 121              		.cfi_startproc
+ 122              		@ args = 0, pretend = 0, frame = 0
+ 123              		@ frame_needed = 0, uses_anonymous_args = 0
+ 124              		@ link register save eliminated.
+ 125 0000 7047     		bx	lr
+ 126              		.cfi_endproc
+ 127              	.LFE27:
+ 129              		.section	.text.rgblight_decrease_sat,"ax",%progbits
+ 130              		.align	1
+ 131              		.weak	rgblight_decrease_sat
+ 132              		.syntax unified
+ 133              		.thumb
+ 134              		.thumb_func
+ 135              		.fpu fpv4-sp-d16
+ 137              	rgblight_decrease_sat:
+ 138              	.LFB29:
+ 139              		.cfi_startproc
+ 140              		@ args = 0, pretend = 0, frame = 0
+ 141              		@ frame_needed = 0, uses_anonymous_args = 0
+ 142              		@ link register save eliminated.
+ 143 0000 7047     		bx	lr
+ 144              		.cfi_endproc
+ 145              	.LFE29:
+ 147              		.section	.text.rgblight_increase_val,"ax",%progbits
+ 148              		.align	1
+ 149              		.weak	rgblight_increase_val
+ 150              		.syntax unified
+ 151              		.thumb
+ 152              		.thumb_func
+ 153              		.fpu fpv4-sp-d16
+ 155              	rgblight_increase_val:
+ 156              	.LFB31:
+ 157              		.cfi_startproc
+ 158              		@ args = 0, pretend = 0, frame = 0
+ 159              		@ frame_needed = 0, uses_anonymous_args = 0
+ 160              		@ link register save eliminated.
+ 161 0000 7047     		bx	lr
+ 162              		.cfi_endproc
+ 163              	.LFE31:
+ 165              		.section	.text.rgblight_decrease_val,"ax",%progbits
+ 166              		.align	1
+ 167              		.weak	rgblight_decrease_val
+ 168              		.syntax unified
+ 169              		.thumb
+ 170              		.thumb_func
+ 171              		.fpu fpv4-sp-d16
+ 173              	rgblight_decrease_val:
+ 174              	.LFB33:
+ 175              		.cfi_startproc
+ 176              		@ args = 0, pretend = 0, frame = 0
+ 177              		@ frame_needed = 0, uses_anonymous_args = 0
+ 178              		@ link register save eliminated.
+ 179 0000 7047     		bx	lr
+ 180              		.cfi_endproc
+ 181              	.LFE33:
+ 183              		.section	.text.rgblight_increase_speed,"ax",%progbits
+ 184              		.align	1
+ 185              		.weak	rgblight_increase_speed
+ 186              		.syntax unified
+ 187              		.thumb
+ 188              		.thumb_func
+ 189              		.fpu fpv4-sp-d16
+ 191              	rgblight_increase_speed:
+ 192              	.LFB35:
+ 193              		.cfi_startproc
+ 194              		@ args = 0, pretend = 0, frame = 0
+ 195              		@ frame_needed = 0, uses_anonymous_args = 0
+ 196              		@ link register save eliminated.
+ 197 0000 7047     		bx	lr
+ 198              		.cfi_endproc
+ 199              	.LFE35:
+ 201              		.section	.text.rgblight_decrease_speed,"ax",%progbits
+ 202              		.align	1
+ 203              		.weak	rgblight_decrease_speed
+ 204              		.syntax unified
+ 205              		.thumb
+ 206              		.thumb_func
+ 207              		.fpu fpv4-sp-d16
+ 209              	rgblight_decrease_speed:
+ 210              	.LFB37:
+ 211              		.cfi_startproc
+ 212              		@ args = 0, pretend = 0, frame = 0
+ 213              		@ frame_needed = 0, uses_anonymous_args = 0
+ 214              		@ link register save eliminated.
+ 215 0000 7047     		bx	lr
+ 216              		.cfi_endproc
+ 217              	.LFE37:
+ 219              		.section	.text.read_logo,"ax",%progbits
+ 220              		.align	1
+ 221              		.global	read_logo
+ 222              		.syntax unified
+ 223              		.thumb
+ 224              		.thumb_func
+ 225              		.fpu fpv4-sp-d16
+ 227              	read_logo:
+ 228              	.LFB17:
+ 229              		.file 2 "keyboards/rainbow65/keymaps/default/../../lib/logo_reader.c"
+   1:keyboards/rainbow65/keymaps/default/../../lib/logo_reader.c **** #include "crkbd.h"
+   2:keyboards/rainbow65/keymaps/default/../../lib/logo_reader.c **** 
+   3:keyboards/rainbow65/keymaps/default/../../lib/logo_reader.c **** const char *read_logo(void) {
+ 230              		.loc 2 3 29 view -0
+ 231              		.cfi_startproc
+ 232              		@ args = 0, pretend = 0, frame = 0
+ 233              		@ frame_needed = 0, uses_anonymous_args = 0
+ 234              		@ link register save eliminated.
+   4:keyboards/rainbow65/keymaps/default/../../lib/logo_reader.c ****   static char logo[] = {
+ 235              		.loc 2 4 3 view .LVU3
+   5:keyboards/rainbow65/keymaps/default/../../lib/logo_reader.c ****       0x80, 0x81, 0x82, 0x83, 0x84, 0x85, 0x86, 0x87, 0x88, 0x89, 0x8a, 0x8b, 0x8c, 0x8d, 0x8e, 0x8
+   6:keyboards/rainbow65/keymaps/default/../../lib/logo_reader.c ****       0xa0, 0xa1, 0xa2, 0xa3, 0xa4, 0xa5, 0xa6, 0xa7, 0xa8, 0xa9, 0xaa, 0xab, 0xac, 0xad, 0xae, 0xa
+   7:keyboards/rainbow65/keymaps/default/../../lib/logo_reader.c ****       0xc0, 0xc1, 0xc2, 0xc3, 0xc4, 0xc5, 0xc6, 0xc7, 0xc8, 0xc9, 0xca, 0xcb, 0xcc, 0xcd, 0xce, 0xc
+   8:keyboards/rainbow65/keymaps/default/../../lib/logo_reader.c ****       0};
+   9:keyboards/rainbow65/keymaps/default/../../lib/logo_reader.c **** 
+  10:keyboards/rainbow65/keymaps/default/../../lib/logo_reader.c ****   return logo;
+ 236              		.loc 2 10 3 view .LVU4
+  11:keyboards/rainbow65/keymaps/default/../../lib/logo_reader.c **** }
+ 237              		.loc 2 11 1 is_stmt 0 view .LVU5
+ 238 0000 0048     		ldr	r0, .L13
+ 239 0002 7047     		bx	lr
+ 240              	.L14:
+ 241              		.align	2
+ 242              	.L13:
+ 243 0004 00000000 		.word	.LANCHOR0
+ 244              		.cfi_endproc
+ 245              	.LFE17:
+ 247              		.section	.data.logo.0,"aw"
+ 248              		.set	.LANCHOR0,. + 0
+ 251              	logo.0:
+ 252 0000 80818283 		.ascii	"\200\201\202\203\204\205\206\207\210\211\212\213\214"
+ 252      84858687 
+ 252      88898A8B 
+ 252      8C
+ 253 000d 8D8E8F90 		.ascii	"\215\216\217\220\221\222\223\224\240\241\242\243\244"
+ 253      91929394 
+ 253      A0A1A2A3 
+ 253      A4
+ 254 001a A5A6A7A8 		.ascii	"\245\246\247\250\251\252\253\254\255\256\257\260\261"
+ 254      A9AAABAC 
+ 254      ADAEAFB0 
+ 254      B1
+ 255 0027 B2B3B4C0 		.ascii	"\262\263\264\300\301\302\303\304\305\306\307\310\311"
+ 255      C1C2C3C4 
+ 255      C5C6C7C8 
+ 255      C9
+ 256 0034 CACBCCCD 		.ascii	"\312\313\314\315\316\317\320\321\322\323\324\000"
+ 256      CECFD0D1 
+ 256      D2D3D400 
+ 257              		.text
+ 258              	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 logo_reader.c
+     /tmp/ccooGIUi.s:18     .text.rgblight_toggle:0000000000000000 $t
+     /tmp/ccooGIUi.s:26     .text.rgblight_toggle:0000000000000000 rgblight_toggle
+     /tmp/ccooGIUi.s:40     .text.rgblight_step:0000000000000000 $t
+     /tmp/ccooGIUi.s:47     .text.rgblight_step:0000000000000000 rgblight_step
+     /tmp/ccooGIUi.s:58     .text.rgblight_step_reverse:0000000000000000 $t
+     /tmp/ccooGIUi.s:65     .text.rgblight_step_reverse:0000000000000000 rgblight_step_reverse
+     /tmp/ccooGIUi.s:76     .text.rgblight_increase_hue:0000000000000000 $t
+     /tmp/ccooGIUi.s:83     .text.rgblight_increase_hue:0000000000000000 rgblight_increase_hue
+     /tmp/ccooGIUi.s:94     .text.rgblight_decrease_hue:0000000000000000 $t
+     /tmp/ccooGIUi.s:101    .text.rgblight_decrease_hue:0000000000000000 rgblight_decrease_hue
+     /tmp/ccooGIUi.s:112    .text.rgblight_increase_sat:0000000000000000 $t
+     /tmp/ccooGIUi.s:119    .text.rgblight_increase_sat:0000000000000000 rgblight_increase_sat
+     /tmp/ccooGIUi.s:130    .text.rgblight_decrease_sat:0000000000000000 $t
+     /tmp/ccooGIUi.s:137    .text.rgblight_decrease_sat:0000000000000000 rgblight_decrease_sat
+     /tmp/ccooGIUi.s:148    .text.rgblight_increase_val:0000000000000000 $t
+     /tmp/ccooGIUi.s:155    .text.rgblight_increase_val:0000000000000000 rgblight_increase_val
+     /tmp/ccooGIUi.s:166    .text.rgblight_decrease_val:0000000000000000 $t
+     /tmp/ccooGIUi.s:173    .text.rgblight_decrease_val:0000000000000000 rgblight_decrease_val
+     /tmp/ccooGIUi.s:184    .text.rgblight_increase_speed:0000000000000000 $t
+     /tmp/ccooGIUi.s:191    .text.rgblight_increase_speed:0000000000000000 rgblight_increase_speed
+     /tmp/ccooGIUi.s:202    .text.rgblight_decrease_speed:0000000000000000 $t
+     /tmp/ccooGIUi.s:209    .text.rgblight_decrease_speed:0000000000000000 rgblight_decrease_speed
+     /tmp/ccooGIUi.s:220    .text.read_logo:0000000000000000 $t
+     /tmp/ccooGIUi.s:227    .text.read_logo:0000000000000000 read_logo
+     /tmp/ccooGIUi.s:243    .text.read_logo:0000000000000004 $d
+     /tmp/ccooGIUi.s:251    .data.logo.0:0000000000000000 logo.0
+
+NO UNDEFINED SYMBOLS

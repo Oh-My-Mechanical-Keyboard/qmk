@@ -1,0 +1,437 @@
+   1              		.cpu cortex-m4
+   2              		.eabi_attribute 27, 1
+   3              		.eabi_attribute 28, 1
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 4
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.file	"layer_state_reader.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.text.rgblight_toggle,"ax",%progbits
+  18              		.align	1
+  19              		.weak	rgblight_toggle
+  20              		.arch armv7e-m
+  21              		.syntax unified
+  22              		.thumb
+  23              		.thumb_func
+  24              		.fpu fpv4-sp-d16
+  26              	rgblight_toggle:
+  27              	.LFB3:
+  28              		.file 1 "quantum/rgb.h"
+   1:quantum/rgb.h **** /* Copyright 2017 Jack Humbert
+   2:quantum/rgb.h ****  *
+   3:quantum/rgb.h ****  * This program is free software: you can redistribute it and/or modify
+   4:quantum/rgb.h ****  * it under the terms of the GNU General Public License as published by
+   5:quantum/rgb.h ****  * the Free Software Foundation, either version 2 of the License, or
+   6:quantum/rgb.h ****  * (at your option) any later version.
+   7:quantum/rgb.h ****  *
+   8:quantum/rgb.h ****  * This program is distributed in the hope that it will be useful,
+   9:quantum/rgb.h ****  * but WITHOUT ANY WARRANTY; without even the implied warranty of
+  10:quantum/rgb.h ****  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  11:quantum/rgb.h ****  * GNU General Public License for more details.
+  12:quantum/rgb.h ****  *
+  13:quantum/rgb.h ****  * You should have received a copy of the GNU General Public License
+  14:quantum/rgb.h ****  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  15:quantum/rgb.h ****  */
+  16:quantum/rgb.h **** 
+  17:quantum/rgb.h **** #ifndef RGB_H
+  18:quantum/rgb.h **** #define RGB_H
+  19:quantum/rgb.h **** 
+  20:quantum/rgb.h **** __attribute__((weak))
+  21:quantum/rgb.h **** void rgblight_toggle(void) {};
+  29              		.loc 1 21 28 view -0
+  30              		.cfi_startproc
+  31              		@ args = 0, pretend = 0, frame = 0
+  32              		@ frame_needed = 0, uses_anonymous_args = 0
+  33              		@ link register save eliminated.
+  34              		.loc 1 21 29 view .LVU1
+  35 0000 7047     		bx	lr
+  36              		.cfi_endproc
+  37              	.LFE3:
+  39              		.section	.text.rgblight_step,"ax",%progbits
+  40              		.align	1
+  41              		.weak	rgblight_step
+  42              		.syntax unified
+  43              		.thumb
+  44              		.thumb_func
+  45              		.fpu fpv4-sp-d16
+  47              	rgblight_step:
+  48              	.LFB22:
+  49              		.cfi_startproc
+  50              		@ args = 0, pretend = 0, frame = 0
+  51              		@ frame_needed = 0, uses_anonymous_args = 0
+  52              		@ link register save eliminated.
+  53 0000 7047     		bx	lr
+  54              		.cfi_endproc
+  55              	.LFE22:
+  57              		.section	.text.rgblight_step_reverse,"ax",%progbits
+  58              		.align	1
+  59              		.weak	rgblight_step_reverse
+  60              		.syntax unified
+  61              		.thumb
+  62              		.thumb_func
+  63              		.fpu fpv4-sp-d16
+  65              	rgblight_step_reverse:
+  66              	.LFB24:
+  67              		.cfi_startproc
+  68              		@ args = 0, pretend = 0, frame = 0
+  69              		@ frame_needed = 0, uses_anonymous_args = 0
+  70              		@ link register save eliminated.
+  71 0000 7047     		bx	lr
+  72              		.cfi_endproc
+  73              	.LFE24:
+  75              		.section	.text.rgblight_increase_hue,"ax",%progbits
+  76              		.align	1
+  77              		.weak	rgblight_increase_hue
+  78              		.syntax unified
+  79              		.thumb
+  80              		.thumb_func
+  81              		.fpu fpv4-sp-d16
+  83              	rgblight_increase_hue:
+  84              	.LFB26:
+  85              		.cfi_startproc
+  86              		@ args = 0, pretend = 0, frame = 0
+  87              		@ frame_needed = 0, uses_anonymous_args = 0
+  88              		@ link register save eliminated.
+  89 0000 7047     		bx	lr
+  90              		.cfi_endproc
+  91              	.LFE26:
+  93              		.section	.text.rgblight_decrease_hue,"ax",%progbits
+  94              		.align	1
+  95              		.weak	rgblight_decrease_hue
+  96              		.syntax unified
+  97              		.thumb
+  98              		.thumb_func
+  99              		.fpu fpv4-sp-d16
+ 101              	rgblight_decrease_hue:
+ 102              	.LFB28:
+ 103              		.cfi_startproc
+ 104              		@ args = 0, pretend = 0, frame = 0
+ 105              		@ frame_needed = 0, uses_anonymous_args = 0
+ 106              		@ link register save eliminated.
+ 107 0000 7047     		bx	lr
+ 108              		.cfi_endproc
+ 109              	.LFE28:
+ 111              		.section	.text.rgblight_increase_sat,"ax",%progbits
+ 112              		.align	1
+ 113              		.weak	rgblight_increase_sat
+ 114              		.syntax unified
+ 115              		.thumb
+ 116              		.thumb_func
+ 117              		.fpu fpv4-sp-d16
+ 119              	rgblight_increase_sat:
+ 120              	.LFB30:
+ 121              		.cfi_startproc
+ 122              		@ args = 0, pretend = 0, frame = 0
+ 123              		@ frame_needed = 0, uses_anonymous_args = 0
+ 124              		@ link register save eliminated.
+ 125 0000 7047     		bx	lr
+ 126              		.cfi_endproc
+ 127              	.LFE30:
+ 129              		.section	.text.rgblight_decrease_sat,"ax",%progbits
+ 130              		.align	1
+ 131              		.weak	rgblight_decrease_sat
+ 132              		.syntax unified
+ 133              		.thumb
+ 134              		.thumb_func
+ 135              		.fpu fpv4-sp-d16
+ 137              	rgblight_decrease_sat:
+ 138              	.LFB32:
+ 139              		.cfi_startproc
+ 140              		@ args = 0, pretend = 0, frame = 0
+ 141              		@ frame_needed = 0, uses_anonymous_args = 0
+ 142              		@ link register save eliminated.
+ 143 0000 7047     		bx	lr
+ 144              		.cfi_endproc
+ 145              	.LFE32:
+ 147              		.section	.text.rgblight_increase_val,"ax",%progbits
+ 148              		.align	1
+ 149              		.weak	rgblight_increase_val
+ 150              		.syntax unified
+ 151              		.thumb
+ 152              		.thumb_func
+ 153              		.fpu fpv4-sp-d16
+ 155              	rgblight_increase_val:
+ 156              	.LFB34:
+ 157              		.cfi_startproc
+ 158              		@ args = 0, pretend = 0, frame = 0
+ 159              		@ frame_needed = 0, uses_anonymous_args = 0
+ 160              		@ link register save eliminated.
+ 161 0000 7047     		bx	lr
+ 162              		.cfi_endproc
+ 163              	.LFE34:
+ 165              		.section	.text.rgblight_decrease_val,"ax",%progbits
+ 166              		.align	1
+ 167              		.weak	rgblight_decrease_val
+ 168              		.syntax unified
+ 169              		.thumb
+ 170              		.thumb_func
+ 171              		.fpu fpv4-sp-d16
+ 173              	rgblight_decrease_val:
+ 174              	.LFB36:
+ 175              		.cfi_startproc
+ 176              		@ args = 0, pretend = 0, frame = 0
+ 177              		@ frame_needed = 0, uses_anonymous_args = 0
+ 178              		@ link register save eliminated.
+ 179 0000 7047     		bx	lr
+ 180              		.cfi_endproc
+ 181              	.LFE36:
+ 183              		.section	.text.rgblight_increase_speed,"ax",%progbits
+ 184              		.align	1
+ 185              		.weak	rgblight_increase_speed
+ 186              		.syntax unified
+ 187              		.thumb
+ 188              		.thumb_func
+ 189              		.fpu fpv4-sp-d16
+ 191              	rgblight_increase_speed:
+ 192              	.LFB38:
+ 193              		.cfi_startproc
+ 194              		@ args = 0, pretend = 0, frame = 0
+ 195              		@ frame_needed = 0, uses_anonymous_args = 0
+ 196              		@ link register save eliminated.
+ 197 0000 7047     		bx	lr
+ 198              		.cfi_endproc
+ 199              	.LFE38:
+ 201              		.section	.text.rgblight_decrease_speed,"ax",%progbits
+ 202              		.align	1
+ 203              		.weak	rgblight_decrease_speed
+ 204              		.syntax unified
+ 205              		.thumb
+ 206              		.thumb_func
+ 207              		.fpu fpv4-sp-d16
+ 209              	rgblight_decrease_speed:
+ 210              	.LFB40:
+ 211              		.cfi_startproc
+ 212              		@ args = 0, pretend = 0, frame = 0
+ 213              		@ frame_needed = 0, uses_anonymous_args = 0
+ 214              		@ link register save eliminated.
+ 215 0000 7047     		bx	lr
+ 216              		.cfi_endproc
+ 217              	.LFE40:
+ 219              		.section	.rodata.read_layer_state.str1.1,"aMS",%progbits,1
+ 220              	.LC0:
+ 221 0000 204C6179 		.ascii	" Layer: Base\000"
+ 221      65723A20 
+ 221      42617365 
+ 221      00
+ 222              	.LC1:
+ 223 000d 204C6179 		.ascii	" Layer: Function\000"
+ 223      65723A20 
+ 223      46756E63 
+ 223      74696F6E 
+ 223      00
+ 224              	.LC2:
+ 225 001e 204C6179 		.ascii	" Layer: Light\000"
+ 225      65723A20 
+ 225      4C696768 
+ 225      7400
+ 226              	.LC3:
+ 227 002c 204C6179 		.ascii	" Layer: System\000"
+ 227      65723A20 
+ 227      53797374 
+ 227      656D00
+ 228              	.LC4:
+ 229 003b 204C6179 		.ascii	" Layer: Bluetooth\000"
+ 229      65723A20 
+ 229      426C7565 
+ 229      746F6F74 
+ 229      6800
+ 230              	.LC5:
+ 231 004d 204C6179 		.ascii	" Layer: Undef-%ld\000"
+ 231      65723A20 
+ 231      556E6465 
+ 231      662D256C 
+ 231      6400
+ 232              		.section	.text.read_layer_state,"ax",%progbits
+ 233              		.align	1
+ 234              		.global	read_layer_state
+ 235              		.syntax unified
+ 236              		.thumb
+ 237              		.thumb_func
+ 238              		.fpu fpv4-sp-d16
+ 240              	read_layer_state:
+ 241              	.LFB20:
+ 242              		.file 2 "keyboards/rainbow65/keymaps/default/../../lib/layer_state_reader.c"
+   1:keyboards/rainbow65/keymaps/default/../../lib/layer_state_reader.c **** 
+   2:keyboards/rainbow65/keymaps/default/../../lib/layer_state_reader.c **** #include QMK_KEYBOARD_H
+   3:keyboards/rainbow65/keymaps/default/../../lib/layer_state_reader.c **** #include <stdio.h>
+   4:keyboards/rainbow65/keymaps/default/../../lib/layer_state_reader.c **** #include "crkbd.h"
+   5:keyboards/rainbow65/keymaps/default/../../lib/layer_state_reader.c **** 
+   6:keyboards/rainbow65/keymaps/default/../../lib/layer_state_reader.c **** // in the future, should use (1U<<_LAYER_NAME) instead, but needs to be moved to keymap,c
+   7:keyboards/rainbow65/keymaps/default/../../lib/layer_state_reader.c **** #define L_BASE 0
+   8:keyboards/rainbow65/keymaps/default/../../lib/layer_state_reader.c **** #define L_DIR 1
+   9:keyboards/rainbow65/keymaps/default/../../lib/layer_state_reader.c **** #define L_RGB 2
+  10:keyboards/rainbow65/keymaps/default/../../lib/layer_state_reader.c **** #define L_SYS 3
+  11:keyboards/rainbow65/keymaps/default/../../lib/layer_state_reader.c **** #define L_BLE 4
+  12:keyboards/rainbow65/keymaps/default/../../lib/layer_state_reader.c **** 
+  13:keyboards/rainbow65/keymaps/default/../../lib/layer_state_reader.c **** 
+  14:keyboards/rainbow65/keymaps/default/../../lib/layer_state_reader.c **** char layer_state_str[24];
+  15:keyboards/rainbow65/keymaps/default/../../lib/layer_state_reader.c **** 
+  16:keyboards/rainbow65/keymaps/default/../../lib/layer_state_reader.c **** const char *read_layer_state(void) {
+ 243              		.loc 2 16 36 view -0
+ 244              		.cfi_startproc
+ 245              		@ args = 0, pretend = 0, frame = 0
+ 246              		@ frame_needed = 0, uses_anonymous_args = 0
+  17:keyboards/rainbow65/keymaps/default/../../lib/layer_state_reader.c ****   switch (biton32(layer_state))
+ 247              		.loc 2 17 3 view .LVU3
+  16:keyboards/rainbow65/keymaps/default/../../lib/layer_state_reader.c ****   switch (biton32(layer_state))
+ 248              		.loc 2 16 36 is_stmt 0 view .LVU4
+ 249 0000 10B5     		push	{r4, lr}
+ 250              		.cfi_def_cfa_offset 8
+ 251              		.cfi_offset 4, -8
+ 252              		.cfi_offset 14, -4
+ 253              		.loc 2 17 11 view .LVU5
+ 254 0002 104C     		ldr	r4, .L22
+ 255 0004 2068     		ldr	r0, [r4]
+ 256 0006 FFF7FEFF 		bl	biton32
+ 257              	.LVL0:
+ 258 000a 0428     		cmp	r0, #4
+ 259 000c 13D8     		bhi	.L13
+ 260 000e DFE800F0 		tbb	[pc, r0]
+ 261              	.L15:
+ 262 0012 03       		.byte	(.L19-.L15)/2
+ 263 0013 0A       		.byte	(.L18-.L15)/2
+ 264 0014 0C       		.byte	(.L17-.L15)/2
+ 265 0015 0E       		.byte	(.L16-.L15)/2
+ 266 0016 10       		.byte	(.L14-.L15)/2
+ 267 0017 00       		.p2align 1
+ 268              	.L19:
+  18:keyboards/rainbow65/keymaps/default/../../lib/layer_state_reader.c ****   {
+  19:keyboards/rainbow65/keymaps/default/../../lib/layer_state_reader.c ****   case L_BASE:
+  20:keyboards/rainbow65/keymaps/default/../../lib/layer_state_reader.c ****     snprintf(layer_state_str, sizeof(layer_state_str), " Layer: Base");
+ 269              		.loc 2 20 5 is_stmt 1 view .LVU6
+ 270 0018 0B4A     		ldr	r2, .L22+4
+ 271              	.L21:
+  21:keyboards/rainbow65/keymaps/default/../../lib/layer_state_reader.c ****     break;
+  22:keyboards/rainbow65/keymaps/default/../../lib/layer_state_reader.c ****   case L_DIR:
+  23:keyboards/rainbow65/keymaps/default/../../lib/layer_state_reader.c ****     snprintf(layer_state_str, sizeof(layer_state_str), " Layer: Function");
+ 272              		.loc 2 23 5 is_stmt 0 view .LVU7
+ 273 001a 0C48     		ldr	r0, .L22+8
+ 274 001c 1821     		movs	r1, #24
+ 275 001e FFF7FEFF 		bl	snprintf
+ 276              	.LVL1:
+  24:keyboards/rainbow65/keymaps/default/../../lib/layer_state_reader.c ****     break;
+ 277              		.loc 2 24 5 is_stmt 1 view .LVU8
+ 278              	.L20:
+  25:keyboards/rainbow65/keymaps/default/../../lib/layer_state_reader.c ****   case L_RGB:
+  26:keyboards/rainbow65/keymaps/default/../../lib/layer_state_reader.c ****     snprintf(layer_state_str, sizeof(layer_state_str), " Layer: Light");
+  27:keyboards/rainbow65/keymaps/default/../../lib/layer_state_reader.c ****     break;
+  28:keyboards/rainbow65/keymaps/default/../../lib/layer_state_reader.c ****   case L_SYS:
+  29:keyboards/rainbow65/keymaps/default/../../lib/layer_state_reader.c ****     snprintf(layer_state_str, sizeof(layer_state_str), " Layer: System");
+  30:keyboards/rainbow65/keymaps/default/../../lib/layer_state_reader.c ****     break;
+  31:keyboards/rainbow65/keymaps/default/../../lib/layer_state_reader.c ****   case L_BLE:
+  32:keyboards/rainbow65/keymaps/default/../../lib/layer_state_reader.c ****     snprintf(layer_state_str, sizeof(layer_state_str), " Layer: Bluetooth");
+  33:keyboards/rainbow65/keymaps/default/../../lib/layer_state_reader.c ****     break;
+  34:keyboards/rainbow65/keymaps/default/../../lib/layer_state_reader.c ****   default:
+  35:keyboards/rainbow65/keymaps/default/../../lib/layer_state_reader.c ****     snprintf(layer_state_str, sizeof(layer_state_str), " Layer: Undef-%ld", layer_state);
+  36:keyboards/rainbow65/keymaps/default/../../lib/layer_state_reader.c ****   }
+  37:keyboards/rainbow65/keymaps/default/../../lib/layer_state_reader.c **** 
+  38:keyboards/rainbow65/keymaps/default/../../lib/layer_state_reader.c ****   return layer_state_str;
+ 279              		.loc 2 38 3 view .LVU9
+  39:keyboards/rainbow65/keymaps/default/../../lib/layer_state_reader.c **** }
+ 280              		.loc 2 39 1 is_stmt 0 view .LVU10
+ 281 0022 0A48     		ldr	r0, .L22+8
+ 282 0024 10BD     		pop	{r4, pc}
+ 283              	.L18:
+  23:keyboards/rainbow65/keymaps/default/../../lib/layer_state_reader.c ****     break;
+ 284              		.loc 2 23 5 is_stmt 1 view .LVU11
+ 285 0026 0A4A     		ldr	r2, .L22+12
+ 286 0028 F7E7     		b	.L21
+ 287              	.L17:
+  26:keyboards/rainbow65/keymaps/default/../../lib/layer_state_reader.c ****     break;
+ 288              		.loc 2 26 5 view .LVU12
+ 289 002a 0A4A     		ldr	r2, .L22+16
+ 290 002c F5E7     		b	.L21
+ 291              	.L16:
+  29:keyboards/rainbow65/keymaps/default/../../lib/layer_state_reader.c ****     break;
+ 292              		.loc 2 29 5 view .LVU13
+ 293 002e 0A4A     		ldr	r2, .L22+20
+ 294 0030 F3E7     		b	.L21
+ 295              	.L14:
+  32:keyboards/rainbow65/keymaps/default/../../lib/layer_state_reader.c ****     break;
+ 296              		.loc 2 32 5 view .LVU14
+ 297 0032 0A4A     		ldr	r2, .L22+24
+ 298 0034 F1E7     		b	.L21
+ 299              	.L13:
+  35:keyboards/rainbow65/keymaps/default/../../lib/layer_state_reader.c ****   }
+ 300              		.loc 2 35 5 view .LVU15
+ 301 0036 2368     		ldr	r3, [r4]
+ 302 0038 094A     		ldr	r2, .L22+28
+ 303 003a 0448     		ldr	r0, .L22+8
+ 304 003c 1821     		movs	r1, #24
+ 305 003e FFF7FEFF 		bl	snprintf
+ 306              	.LVL2:
+ 307 0042 EEE7     		b	.L20
+ 308              	.L23:
+ 309              		.align	2
+ 310              	.L22:
+ 311 0044 00000000 		.word	layer_state
+ 312 0048 00000000 		.word	.LC0
+ 313 004c 00000000 		.word	.LANCHOR0
+ 314 0050 0D000000 		.word	.LC1
+ 315 0054 1E000000 		.word	.LC2
+ 316 0058 2C000000 		.word	.LC3
+ 317 005c 3B000000 		.word	.LC4
+ 318 0060 4D000000 		.word	.LC5
+ 319              		.cfi_endproc
+ 320              	.LFE20:
+ 322              		.global	layer_state_str
+ 323              		.section	.bss.layer_state_str,"aw",%nobits
+ 324              		.set	.LANCHOR0,. + 0
+ 327              	layer_state_str:
+ 328 0000 00000000 		.space	24
+ 328      00000000 
+ 328      00000000 
+ 328      00000000 
+ 328      00000000 
+ 329              		.text
+ 330              	.Letext0:
+ 331              		.file 3 "/usr/arm-none-eabi/include/machine/_default_types.h"
+ 332              		.file 4 "/usr/arm-none-eabi/include/sys/_stdint.h"
+ 333              		.file 5 "tmk_core/common/action_layer.h"
+ 334              		.file 6 "tmk_core/common/util.h"
+ 335              		.file 7 "/usr/arm-none-eabi/include/stdio.h"
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 layer_state_reader.c
+     /tmp/ccm4Qaor.s:18     .text.rgblight_toggle:0000000000000000 $t
+     /tmp/ccm4Qaor.s:26     .text.rgblight_toggle:0000000000000000 rgblight_toggle
+     /tmp/ccm4Qaor.s:40     .text.rgblight_step:0000000000000000 $t
+     /tmp/ccm4Qaor.s:47     .text.rgblight_step:0000000000000000 rgblight_step
+     /tmp/ccm4Qaor.s:58     .text.rgblight_step_reverse:0000000000000000 $t
+     /tmp/ccm4Qaor.s:65     .text.rgblight_step_reverse:0000000000000000 rgblight_step_reverse
+     /tmp/ccm4Qaor.s:76     .text.rgblight_increase_hue:0000000000000000 $t
+     /tmp/ccm4Qaor.s:83     .text.rgblight_increase_hue:0000000000000000 rgblight_increase_hue
+     /tmp/ccm4Qaor.s:94     .text.rgblight_decrease_hue:0000000000000000 $t
+     /tmp/ccm4Qaor.s:101    .text.rgblight_decrease_hue:0000000000000000 rgblight_decrease_hue
+     /tmp/ccm4Qaor.s:112    .text.rgblight_increase_sat:0000000000000000 $t
+     /tmp/ccm4Qaor.s:119    .text.rgblight_increase_sat:0000000000000000 rgblight_increase_sat
+     /tmp/ccm4Qaor.s:130    .text.rgblight_decrease_sat:0000000000000000 $t
+     /tmp/ccm4Qaor.s:137    .text.rgblight_decrease_sat:0000000000000000 rgblight_decrease_sat
+     /tmp/ccm4Qaor.s:148    .text.rgblight_increase_val:0000000000000000 $t
+     /tmp/ccm4Qaor.s:155    .text.rgblight_increase_val:0000000000000000 rgblight_increase_val
+     /tmp/ccm4Qaor.s:166    .text.rgblight_decrease_val:0000000000000000 $t
+     /tmp/ccm4Qaor.s:173    .text.rgblight_decrease_val:0000000000000000 rgblight_decrease_val
+     /tmp/ccm4Qaor.s:184    .text.rgblight_increase_speed:0000000000000000 $t
+     /tmp/ccm4Qaor.s:191    .text.rgblight_increase_speed:0000000000000000 rgblight_increase_speed
+     /tmp/ccm4Qaor.s:202    .text.rgblight_decrease_speed:0000000000000000 $t
+     /tmp/ccm4Qaor.s:209    .text.rgblight_decrease_speed:0000000000000000 rgblight_decrease_speed
+     /tmp/ccm4Qaor.s:233    .text.read_layer_state:0000000000000000 $t
+     /tmp/ccm4Qaor.s:240    .text.read_layer_state:0000000000000000 read_layer_state
+     /tmp/ccm4Qaor.s:262    .text.read_layer_state:0000000000000012 $d
+     /tmp/ccm4Qaor.s:311    .text.read_layer_state:0000000000000044 $d
+     /tmp/ccm4Qaor.s:327    .bss.layer_state_str:0000000000000000 layer_state_str
+     /tmp/ccm4Qaor.s:328    .bss.layer_state_str:0000000000000000 $d
+     /tmp/ccm4Qaor.s:267    .text.read_layer_state:0000000000000017 $d
+     /tmp/ccm4Qaor.s:267    .text.read_layer_state:0000000000000018 $t
+
+UNDEFINED SYMBOLS
+biton32
+snprintf
+layer_state

@@ -1,0 +1,541 @@
+   1              		.cpu cortex-m4
+   2              		.eabi_attribute 27, 1
+   3              		.eabi_attribute 28, 1
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 4
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.file	"keylogger.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.text.rgblight_toggle,"ax",%progbits
+  18              		.align	1
+  19              		.weak	rgblight_toggle
+  20              		.arch armv7e-m
+  21              		.syntax unified
+  22              		.thumb
+  23              		.thumb_func
+  24              		.fpu fpv4-sp-d16
+  26              	rgblight_toggle:
+  27              	.LFB6:
+  28              		.file 1 "quantum/rgb.h"
+   1:quantum/rgb.h **** /* Copyright 2017 Jack Humbert
+   2:quantum/rgb.h ****  *
+   3:quantum/rgb.h ****  * This program is free software: you can redistribute it and/or modify
+   4:quantum/rgb.h ****  * it under the terms of the GNU General Public License as published by
+   5:quantum/rgb.h ****  * the Free Software Foundation, either version 2 of the License, or
+   6:quantum/rgb.h ****  * (at your option) any later version.
+   7:quantum/rgb.h ****  *
+   8:quantum/rgb.h ****  * This program is distributed in the hope that it will be useful,
+   9:quantum/rgb.h ****  * but WITHOUT ANY WARRANTY; without even the implied warranty of
+  10:quantum/rgb.h ****  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  11:quantum/rgb.h ****  * GNU General Public License for more details.
+  12:quantum/rgb.h ****  *
+  13:quantum/rgb.h ****  * You should have received a copy of the GNU General Public License
+  14:quantum/rgb.h ****  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  15:quantum/rgb.h ****  */
+  16:quantum/rgb.h **** 
+  17:quantum/rgb.h **** #ifndef RGB_H
+  18:quantum/rgb.h **** #define RGB_H
+  19:quantum/rgb.h **** 
+  20:quantum/rgb.h **** __attribute__((weak))
+  21:quantum/rgb.h **** void rgblight_toggle(void) {};
+  29              		.loc 1 21 28 view -0
+  30              		.cfi_startproc
+  31              		@ args = 0, pretend = 0, frame = 0
+  32              		@ frame_needed = 0, uses_anonymous_args = 0
+  33              		@ link register save eliminated.
+  34              		.loc 1 21 29 view .LVU1
+  35 0000 7047     		bx	lr
+  36              		.cfi_endproc
+  37              	.LFE6:
+  39              		.section	.text.rgblight_step,"ax",%progbits
+  40              		.align	1
+  41              		.weak	rgblight_step
+  42              		.syntax unified
+  43              		.thumb
+  44              		.thumb_func
+  45              		.fpu fpv4-sp-d16
+  47              	rgblight_step:
+  48              	.LFB24:
+  49              		.cfi_startproc
+  50              		@ args = 0, pretend = 0, frame = 0
+  51              		@ frame_needed = 0, uses_anonymous_args = 0
+  52              		@ link register save eliminated.
+  53 0000 7047     		bx	lr
+  54              		.cfi_endproc
+  55              	.LFE24:
+  57              		.section	.text.rgblight_step_reverse,"ax",%progbits
+  58              		.align	1
+  59              		.weak	rgblight_step_reverse
+  60              		.syntax unified
+  61              		.thumb
+  62              		.thumb_func
+  63              		.fpu fpv4-sp-d16
+  65              	rgblight_step_reverse:
+  66              	.LFB26:
+  67              		.cfi_startproc
+  68              		@ args = 0, pretend = 0, frame = 0
+  69              		@ frame_needed = 0, uses_anonymous_args = 0
+  70              		@ link register save eliminated.
+  71 0000 7047     		bx	lr
+  72              		.cfi_endproc
+  73              	.LFE26:
+  75              		.section	.text.rgblight_increase_hue,"ax",%progbits
+  76              		.align	1
+  77              		.weak	rgblight_increase_hue
+  78              		.syntax unified
+  79              		.thumb
+  80              		.thumb_func
+  81              		.fpu fpv4-sp-d16
+  83              	rgblight_increase_hue:
+  84              	.LFB28:
+  85              		.cfi_startproc
+  86              		@ args = 0, pretend = 0, frame = 0
+  87              		@ frame_needed = 0, uses_anonymous_args = 0
+  88              		@ link register save eliminated.
+  89 0000 7047     		bx	lr
+  90              		.cfi_endproc
+  91              	.LFE28:
+  93              		.section	.text.rgblight_decrease_hue,"ax",%progbits
+  94              		.align	1
+  95              		.weak	rgblight_decrease_hue
+  96              		.syntax unified
+  97              		.thumb
+  98              		.thumb_func
+  99              		.fpu fpv4-sp-d16
+ 101              	rgblight_decrease_hue:
+ 102              	.LFB30:
+ 103              		.cfi_startproc
+ 104              		@ args = 0, pretend = 0, frame = 0
+ 105              		@ frame_needed = 0, uses_anonymous_args = 0
+ 106              		@ link register save eliminated.
+ 107 0000 7047     		bx	lr
+ 108              		.cfi_endproc
+ 109              	.LFE30:
+ 111              		.section	.text.rgblight_increase_sat,"ax",%progbits
+ 112              		.align	1
+ 113              		.weak	rgblight_increase_sat
+ 114              		.syntax unified
+ 115              		.thumb
+ 116              		.thumb_func
+ 117              		.fpu fpv4-sp-d16
+ 119              	rgblight_increase_sat:
+ 120              	.LFB32:
+ 121              		.cfi_startproc
+ 122              		@ args = 0, pretend = 0, frame = 0
+ 123              		@ frame_needed = 0, uses_anonymous_args = 0
+ 124              		@ link register save eliminated.
+ 125 0000 7047     		bx	lr
+ 126              		.cfi_endproc
+ 127              	.LFE32:
+ 129              		.section	.text.rgblight_decrease_sat,"ax",%progbits
+ 130              		.align	1
+ 131              		.weak	rgblight_decrease_sat
+ 132              		.syntax unified
+ 133              		.thumb
+ 134              		.thumb_func
+ 135              		.fpu fpv4-sp-d16
+ 137              	rgblight_decrease_sat:
+ 138              	.LFB34:
+ 139              		.cfi_startproc
+ 140              		@ args = 0, pretend = 0, frame = 0
+ 141              		@ frame_needed = 0, uses_anonymous_args = 0
+ 142              		@ link register save eliminated.
+ 143 0000 7047     		bx	lr
+ 144              		.cfi_endproc
+ 145              	.LFE34:
+ 147              		.section	.text.rgblight_increase_val,"ax",%progbits
+ 148              		.align	1
+ 149              		.weak	rgblight_increase_val
+ 150              		.syntax unified
+ 151              		.thumb
+ 152              		.thumb_func
+ 153              		.fpu fpv4-sp-d16
+ 155              	rgblight_increase_val:
+ 156              	.LFB36:
+ 157              		.cfi_startproc
+ 158              		@ args = 0, pretend = 0, frame = 0
+ 159              		@ frame_needed = 0, uses_anonymous_args = 0
+ 160              		@ link register save eliminated.
+ 161 0000 7047     		bx	lr
+ 162              		.cfi_endproc
+ 163              	.LFE36:
+ 165              		.section	.text.rgblight_decrease_val,"ax",%progbits
+ 166              		.align	1
+ 167              		.weak	rgblight_decrease_val
+ 168              		.syntax unified
+ 169              		.thumb
+ 170              		.thumb_func
+ 171              		.fpu fpv4-sp-d16
+ 173              	rgblight_decrease_val:
+ 174              	.LFB38:
+ 175              		.cfi_startproc
+ 176              		@ args = 0, pretend = 0, frame = 0
+ 177              		@ frame_needed = 0, uses_anonymous_args = 0
+ 178              		@ link register save eliminated.
+ 179 0000 7047     		bx	lr
+ 180              		.cfi_endproc
+ 181              	.LFE38:
+ 183              		.section	.text.rgblight_increase_speed,"ax",%progbits
+ 184              		.align	1
+ 185              		.weak	rgblight_increase_speed
+ 186              		.syntax unified
+ 187              		.thumb
+ 188              		.thumb_func
+ 189              		.fpu fpv4-sp-d16
+ 191              	rgblight_increase_speed:
+ 192              	.LFB40:
+ 193              		.cfi_startproc
+ 194              		@ args = 0, pretend = 0, frame = 0
+ 195              		@ frame_needed = 0, uses_anonymous_args = 0
+ 196              		@ link register save eliminated.
+ 197 0000 7047     		bx	lr
+ 198              		.cfi_endproc
+ 199              	.LFE40:
+ 201              		.section	.text.rgblight_decrease_speed,"ax",%progbits
+ 202              		.align	1
+ 203              		.weak	rgblight_decrease_speed
+ 204              		.syntax unified
+ 205              		.thumb
+ 206              		.thumb_func
+ 207              		.fpu fpv4-sp-d16
+ 209              	rgblight_decrease_speed:
+ 210              	.LFB42:
+ 211              		.cfi_startproc
+ 212              		@ args = 0, pretend = 0, frame = 0
+ 213              		@ frame_needed = 0, uses_anonymous_args = 0
+ 214              		@ link register save eliminated.
+ 215 0000 7047     		bx	lr
+ 216              		.cfi_endproc
+ 217              	.LFE42:
+ 219              		.section	.rodata.set_keylog.str1.1,"aMS",%progbits,1
+ 220              	.LC0:
+ 221 0000 25647825 		.ascii	"%dx%d, k%2d : %c\000"
+ 221      642C206B 
+ 221      25326420 
+ 221      3A202563 
+ 221      00
+ 222              		.section	.text.set_keylog,"ax",%progbits
+ 223              		.align	1
+ 224              		.global	set_keylog
+ 225              		.syntax unified
+ 226              		.thumb
+ 227              		.thumb_func
+ 228              		.fpu fpv4-sp-d16
+ 230              	set_keylog:
+ 231              	.LVL0:
+ 232              	.LFB20:
+ 233              		.file 2 "keyboards/rainbow65/keymaps/default/../../lib/keylogger.c"
+   1:keyboards/rainbow65/keymaps/default/../../lib/keylogger.c **** #include <stdio.h>
+   2:keyboards/rainbow65/keymaps/default/../../lib/keylogger.c **** #include "crkbd.h"
+   3:keyboards/rainbow65/keymaps/default/../../lib/keylogger.c **** 
+   4:keyboards/rainbow65/keymaps/default/../../lib/keylogger.c **** char keylog_str[24] = {};
+   5:keyboards/rainbow65/keymaps/default/../../lib/keylogger.c **** char keylogs_str[21] = {};
+   6:keyboards/rainbow65/keymaps/default/../../lib/keylogger.c **** int keylogs_str_idx = 0;
+   7:keyboards/rainbow65/keymaps/default/../../lib/keylogger.c **** 
+   8:keyboards/rainbow65/keymaps/default/../../lib/keylogger.c **** const char code_to_name[60] = {
+   9:keyboards/rainbow65/keymaps/default/../../lib/keylogger.c ****     ' ', ' ', ' ', ' ', 'a', 'b', 'c', 'd', 'e', 'f',
+  10:keyboards/rainbow65/keymaps/default/../../lib/keylogger.c ****     'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p',
+  11:keyboards/rainbow65/keymaps/default/../../lib/keylogger.c ****     'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
+  12:keyboards/rainbow65/keymaps/default/../../lib/keylogger.c ****     '1', '2', '3', '4', '5', '6', '7', '8', '9', '0',
+  13:keyboards/rainbow65/keymaps/default/../../lib/keylogger.c ****     'R', 'E', 'B', 'T', ' ', ' ', ' ', ' ', ' ', ' ',
+  14:keyboards/rainbow65/keymaps/default/../../lib/keylogger.c ****     ' ', ';', '\'', ' ', ',', '.', '/', ' ', ' ', ' '};
+  15:keyboards/rainbow65/keymaps/default/../../lib/keylogger.c **** 
+  16:keyboards/rainbow65/keymaps/default/../../lib/keylogger.c **** void set_keylog(uint16_t keycode, keyrecord_t *record) {
+ 234              		.loc 2 16 56 view -0
+ 235              		.cfi_startproc
+ 236              		@ args = 0, pretend = 0, frame = 0
+ 237              		@ frame_needed = 0, uses_anonymous_args = 0
+  17:keyboards/rainbow65/keymaps/default/../../lib/keylogger.c ****   char name = ' ';
+ 238              		.loc 2 17 3 view .LVU3
+  18:keyboards/rainbow65/keymaps/default/../../lib/keylogger.c ****   if (keycode < 60) {
+ 239              		.loc 2 18 3 view .LVU4
+  16:keyboards/rainbow65/keymaps/default/../../lib/keylogger.c ****   char name = ' ';
+ 240              		.loc 2 16 56 is_stmt 0 view .LVU5
+ 241 0000 30B5     		push	{r4, r5, lr}
+ 242              		.cfi_def_cfa_offset 12
+ 243              		.cfi_offset 4, -12
+ 244              		.cfi_offset 5, -8
+ 245              		.cfi_offset 14, -4
+ 246              		.loc 2 18 6 view .LVU6
+ 247 0002 3B28     		cmp	r0, #59
+  19:keyboards/rainbow65/keymaps/default/../../lib/keylogger.c ****     name = code_to_name[keycode];
+ 248              		.loc 2 19 5 is_stmt 1 view .LVU7
+ 249              		.loc 2 19 10 is_stmt 0 view .LVU8
+ 250 0004 98BF     		it	ls
+ 251 0006 124B     		ldrls	r3, .L20
+  20:keyboards/rainbow65/keymaps/default/../../lib/keylogger.c ****   }
+  21:keyboards/rainbow65/keymaps/default/../../lib/keylogger.c **** 
+  22:keyboards/rainbow65/keymaps/default/../../lib/keylogger.c ****   // update keylog
+  23:keyboards/rainbow65/keymaps/default/../../lib/keylogger.c ****   snprintf(keylog_str, sizeof(keylog_str), "%dx%d, k%2d : %c",
+ 252              		.loc 2 23 3 view .LVU9
+ 253 0008 124A     		ldr	r2, .L20+4
+  19:keyboards/rainbow65/keymaps/default/../../lib/keylogger.c ****     name = code_to_name[keycode];
+ 254              		.loc 2 19 10 view .LVU10
+ 255 000a 98BF     		it	ls
+ 256 000c 1C5C     		ldrbls	r4, [r3, r0]	@ zero_extendqisi2
+ 257              	.LVL1:
+  16:keyboards/rainbow65/keymaps/default/../../lib/keylogger.c ****   char name = ' ';
+ 258              		.loc 2 16 56 view .LVU11
+ 259 000e 85B0     		sub	sp, sp, #20
+ 260              		.cfi_def_cfa_offset 32
+  17:keyboards/rainbow65/keymaps/default/../../lib/keylogger.c ****   if (keycode < 60) {
+ 261              		.loc 2 17 8 view .LVU12
+ 262 0010 88BF     		it	hi
+ 263 0012 2024     		movhi	r4, #32
+ 264              	.LVL2:
+ 265              		.loc 2 23 3 is_stmt 1 view .LVU13
+ 266 0014 CDE90104 		strd	r0, r4, [sp, #4]
+ 267 0018 0B78     		ldrb	r3, [r1]	@ zero_extendqisi2
+ 268 001a 0093     		str	r3, [sp]
+ 269 001c 4B78     		ldrb	r3, [r1, #1]	@ zero_extendqisi2
+ 270 001e 0E48     		ldr	r0, .L20+8
+ 271              	.LVL3:
+ 272              		.loc 2 23 3 is_stmt 0 view .LVU14
+ 273 0020 1821     		movs	r1, #24
+ 274              	.LVL4:
+ 275              		.loc 2 23 3 view .LVU15
+ 276 0022 FFF7FEFF 		bl	snprintf
+ 277              	.LVL5:
+  24:keyboards/rainbow65/keymaps/default/../../lib/keylogger.c ****            record->event.key.row, record->event.key.col,
+  25:keyboards/rainbow65/keymaps/default/../../lib/keylogger.c ****            keycode, name);
+  26:keyboards/rainbow65/keymaps/default/../../lib/keylogger.c **** 
+  27:keyboards/rainbow65/keymaps/default/../../lib/keylogger.c ****   // update keylogs
+  28:keyboards/rainbow65/keymaps/default/../../lib/keylogger.c ****   if (keylogs_str_idx == sizeof(keylogs_str) - 1) {
+ 278              		.loc 2 28 3 is_stmt 1 view .LVU16
+ 279              		.loc 2 28 23 is_stmt 0 view .LVU17
+ 280 0026 0D4A     		ldr	r2, .L20+12
+ 281 0028 0D49     		ldr	r1, .L20+16
+ 282              		.loc 2 28 6 view .LVU18
+ 283 002a 1368     		ldr	r3, [r2]
+ 284 002c 142B     		cmp	r3, #20
+ 285 002e 05D0     		beq	.L14
+ 286              	.L16:
+  29:keyboards/rainbow65/keymaps/default/../../lib/keylogger.c ****     keylogs_str_idx = 0;
+  30:keyboards/rainbow65/keymaps/default/../../lib/keylogger.c ****     for (int i = 0; i < sizeof(keylogs_str) - 1; i++) {
+  31:keyboards/rainbow65/keymaps/default/../../lib/keylogger.c ****       keylogs_str[i] = ' ';
+  32:keyboards/rainbow65/keymaps/default/../../lib/keylogger.c ****     }
+  33:keyboards/rainbow65/keymaps/default/../../lib/keylogger.c ****   }
+  34:keyboards/rainbow65/keymaps/default/../../lib/keylogger.c **** 
+  35:keyboards/rainbow65/keymaps/default/../../lib/keylogger.c ****   keylogs_str[keylogs_str_idx] = name;
+ 287              		.loc 2 35 3 is_stmt 1 view .LVU19
+ 288              		.loc 2 35 14 is_stmt 0 view .LVU20
+ 289 0030 1368     		ldr	r3, [r2]
+ 290              		.loc 2 35 32 view .LVU21
+ 291 0032 CC54     		strb	r4, [r1, r3]
+  36:keyboards/rainbow65/keymaps/default/../../lib/keylogger.c ****   keylogs_str_idx++;
+ 292              		.loc 2 36 3 is_stmt 1 view .LVU22
+ 293              		.loc 2 36 18 is_stmt 0 view .LVU23
+ 294 0034 0133     		adds	r3, r3, #1
+ 295 0036 1360     		str	r3, [r2]
+  37:keyboards/rainbow65/keymaps/default/../../lib/keylogger.c **** }
+ 296              		.loc 2 37 1 view .LVU24
+ 297 0038 05B0     		add	sp, sp, #20
+ 298              		.cfi_remember_state
+ 299              		.cfi_def_cfa_offset 12
+ 300              		@ sp needed
+ 301 003a 30BD     		pop	{r4, r5, pc}
+ 302              	.LVL6:
+ 303              	.L14:
+ 304              		.cfi_restore_state
+  29:keyboards/rainbow65/keymaps/default/../../lib/keylogger.c ****     keylogs_str_idx = 0;
+ 305              		.loc 2 29 5 is_stmt 1 view .LVU25
+  29:keyboards/rainbow65/keymaps/default/../../lib/keylogger.c ****     keylogs_str_idx = 0;
+ 306              		.loc 2 29 21 is_stmt 0 view .LVU26
+ 307 003c 0023     		movs	r3, #0
+ 308 003e 1360     		str	r3, [r2]
+  30:keyboards/rainbow65/keymaps/default/../../lib/keylogger.c ****       keylogs_str[i] = ' ';
+ 309              		.loc 2 30 5 is_stmt 1 view .LVU27
+ 310              	.LBB2:
+  30:keyboards/rainbow65/keymaps/default/../../lib/keylogger.c ****       keylogs_str[i] = ' ';
+ 311              		.loc 2 30 10 view .LVU28
+ 312              	.LVL7:
+  30:keyboards/rainbow65/keymaps/default/../../lib/keylogger.c ****       keylogs_str[i] = ' ';
+ 313              		.loc 2 30 21 view .LVU29
+ 314 0040 0846     		mov	r0, r1
+  31:keyboards/rainbow65/keymaps/default/../../lib/keylogger.c ****     }
+ 315              		.loc 2 31 22 is_stmt 0 view .LVU30
+ 316 0042 2025     		movs	r5, #32
+ 317              	.LVL8:
+ 318              	.L15:
+  31:keyboards/rainbow65/keymaps/default/../../lib/keylogger.c ****     }
+ 319              		.loc 2 31 7 is_stmt 1 discriminator 3 view .LVU31
+  30:keyboards/rainbow65/keymaps/default/../../lib/keylogger.c ****       keylogs_str[i] = ' ';
+ 320              		.loc 2 30 51 is_stmt 0 discriminator 3 view .LVU32
+ 321 0044 0133     		adds	r3, r3, #1
+ 322              	.LVL9:
+  30:keyboards/rainbow65/keymaps/default/../../lib/keylogger.c ****       keylogs_str[i] = ' ';
+ 323              		.loc 2 30 5 discriminator 3 view .LVU33
+ 324 0046 142B     		cmp	r3, #20
+  31:keyboards/rainbow65/keymaps/default/../../lib/keylogger.c ****     }
+ 325              		.loc 2 31 22 discriminator 3 view .LVU34
+ 326 0048 00F8015B 		strb	r5, [r0], #1
+  30:keyboards/rainbow65/keymaps/default/../../lib/keylogger.c ****       keylogs_str[i] = ' ';
+ 327              		.loc 2 30 50 is_stmt 1 discriminator 3 view .LVU35
+ 328              	.LVL10:
+  30:keyboards/rainbow65/keymaps/default/../../lib/keylogger.c ****       keylogs_str[i] = ' ';
+ 329              		.loc 2 30 21 discriminator 3 view .LVU36
+  30:keyboards/rainbow65/keymaps/default/../../lib/keylogger.c ****       keylogs_str[i] = ' ';
+ 330              		.loc 2 30 5 is_stmt 0 discriminator 3 view .LVU37
+ 331 004c FAD1     		bne	.L15
+ 332 004e EFE7     		b	.L16
+ 333              	.L21:
+ 334              		.align	2
+ 335              	.L20:
+ 336 0050 00000000 		.word	.LANCHOR0
+ 337 0054 00000000 		.word	.LC0
+ 338 0058 00000000 		.word	.LANCHOR1
+ 339 005c 00000000 		.word	.LANCHOR2
+ 340 0060 00000000 		.word	.LANCHOR3
+ 341              	.LBE2:
+ 342              		.cfi_endproc
+ 343              	.LFE20:
+ 345              		.section	.text.read_keylog,"ax",%progbits
+ 346              		.align	1
+ 347              		.global	read_keylog
+ 348              		.syntax unified
+ 349              		.thumb
+ 350              		.thumb_func
+ 351              		.fpu fpv4-sp-d16
+ 353              	read_keylog:
+ 354              	.LFB21:
+  38:keyboards/rainbow65/keymaps/default/../../lib/keylogger.c **** 
+  39:keyboards/rainbow65/keymaps/default/../../lib/keylogger.c **** const char *read_keylog(void) {
+ 355              		.loc 2 39 31 is_stmt 1 view -0
+ 356              		.cfi_startproc
+ 357              		@ args = 0, pretend = 0, frame = 0
+ 358              		@ frame_needed = 0, uses_anonymous_args = 0
+ 359              		@ link register save eliminated.
+  40:keyboards/rainbow65/keymaps/default/../../lib/keylogger.c ****   return keylog_str;
+ 360              		.loc 2 40 3 view .LVU39
+  41:keyboards/rainbow65/keymaps/default/../../lib/keylogger.c **** }
+ 361              		.loc 2 41 1 is_stmt 0 view .LVU40
+ 362 0000 0048     		ldr	r0, .L23
+ 363 0002 7047     		bx	lr
+ 364              	.L24:
+ 365              		.align	2
+ 366              	.L23:
+ 367 0004 00000000 		.word	.LANCHOR1
+ 368              		.cfi_endproc
+ 369              	.LFE21:
+ 371              		.section	.text.read_keylogs,"ax",%progbits
+ 372              		.align	1
+ 373              		.global	read_keylogs
+ 374              		.syntax unified
+ 375              		.thumb
+ 376              		.thumb_func
+ 377              		.fpu fpv4-sp-d16
+ 379              	read_keylogs:
+ 380              	.LFB22:
+  42:keyboards/rainbow65/keymaps/default/../../lib/keylogger.c **** 
+  43:keyboards/rainbow65/keymaps/default/../../lib/keylogger.c **** const char *read_keylogs(void) {
+ 381              		.loc 2 43 32 is_stmt 1 view -0
+ 382              		.cfi_startproc
+ 383              		@ args = 0, pretend = 0, frame = 0
+ 384              		@ frame_needed = 0, uses_anonymous_args = 0
+ 385              		@ link register save eliminated.
+  44:keyboards/rainbow65/keymaps/default/../../lib/keylogger.c ****   return keylogs_str;
+ 386              		.loc 2 44 3 view .LVU42
+  45:keyboards/rainbow65/keymaps/default/../../lib/keylogger.c **** }
+ 387              		.loc 2 45 1 is_stmt 0 view .LVU43
+ 388 0000 0048     		ldr	r0, .L26
+ 389 0002 7047     		bx	lr
+ 390              	.L27:
+ 391              		.align	2
+ 392              	.L26:
+ 393 0004 00000000 		.word	.LANCHOR3
+ 394              		.cfi_endproc
+ 395              	.LFE22:
+ 397              		.global	code_to_name
+ 398              		.global	keylogs_str_idx
+ 399              		.global	keylogs_str
+ 400              		.global	keylog_str
+ 401              		.section	.bss.keylog_str,"aw",%nobits
+ 402              		.set	.LANCHOR1,. + 0
+ 405              	keylog_str:
+ 406 0000 00000000 		.space	24
+ 406      00000000 
+ 406      00000000 
+ 406      00000000 
+ 406      00000000 
+ 407              		.section	.bss.keylogs_str,"aw",%nobits
+ 408              		.set	.LANCHOR3,. + 0
+ 411              	keylogs_str:
+ 412 0000 00000000 		.space	21
+ 412      00000000 
+ 412      00000000 
+ 412      00000000 
+ 412      00000000 
+ 413              		.section	.bss.keylogs_str_idx,"aw",%nobits
+ 414              		.align	2
+ 415              		.set	.LANCHOR2,. + 0
+ 418              	keylogs_str_idx:
+ 419 0000 00000000 		.space	4
+ 420              		.section	.rodata.code_to_name,"a"
+ 421              		.set	.LANCHOR0,. + 0
+ 424              	code_to_name:
+ 425 0000 20202020 		.ascii	"    abcdefghijklmnopqrstuvwxyz1234567890REBT       "
+ 425      61626364 
+ 425      65666768 
+ 425      696A6B6C 
+ 425      6D6E6F70 
+ 426 0033 3B27202C 		.ascii	";' ,./   "
+ 426      2E2F2020 
+ 426      20
+ 427              		.text
+ 428              	.Letext0:
+ 429              		.file 3 "/usr/arm-none-eabi/include/machine/_default_types.h"
+ 430              		.file 4 "/usr/arm-none-eabi/include/sys/_stdint.h"
+ 431              		.file 5 "tmk_core/common/keyboard.h"
+ 432              		.file 6 "tmk_core/common/action.h"
+ 433              		.file 7 "/usr/arm-none-eabi/include/stdio.h"
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 keylogger.c
+     /tmp/cc1YnPsc.s:18     .text.rgblight_toggle:0000000000000000 $t
+     /tmp/cc1YnPsc.s:26     .text.rgblight_toggle:0000000000000000 rgblight_toggle
+     /tmp/cc1YnPsc.s:40     .text.rgblight_step:0000000000000000 $t
+     /tmp/cc1YnPsc.s:47     .text.rgblight_step:0000000000000000 rgblight_step
+     /tmp/cc1YnPsc.s:58     .text.rgblight_step_reverse:0000000000000000 $t
+     /tmp/cc1YnPsc.s:65     .text.rgblight_step_reverse:0000000000000000 rgblight_step_reverse
+     /tmp/cc1YnPsc.s:76     .text.rgblight_increase_hue:0000000000000000 $t
+     /tmp/cc1YnPsc.s:83     .text.rgblight_increase_hue:0000000000000000 rgblight_increase_hue
+     /tmp/cc1YnPsc.s:94     .text.rgblight_decrease_hue:0000000000000000 $t
+     /tmp/cc1YnPsc.s:101    .text.rgblight_decrease_hue:0000000000000000 rgblight_decrease_hue
+     /tmp/cc1YnPsc.s:112    .text.rgblight_increase_sat:0000000000000000 $t
+     /tmp/cc1YnPsc.s:119    .text.rgblight_increase_sat:0000000000000000 rgblight_increase_sat
+     /tmp/cc1YnPsc.s:130    .text.rgblight_decrease_sat:0000000000000000 $t
+     /tmp/cc1YnPsc.s:137    .text.rgblight_decrease_sat:0000000000000000 rgblight_decrease_sat
+     /tmp/cc1YnPsc.s:148    .text.rgblight_increase_val:0000000000000000 $t
+     /tmp/cc1YnPsc.s:155    .text.rgblight_increase_val:0000000000000000 rgblight_increase_val
+     /tmp/cc1YnPsc.s:166    .text.rgblight_decrease_val:0000000000000000 $t
+     /tmp/cc1YnPsc.s:173    .text.rgblight_decrease_val:0000000000000000 rgblight_decrease_val
+     /tmp/cc1YnPsc.s:184    .text.rgblight_increase_speed:0000000000000000 $t
+     /tmp/cc1YnPsc.s:191    .text.rgblight_increase_speed:0000000000000000 rgblight_increase_speed
+     /tmp/cc1YnPsc.s:202    .text.rgblight_decrease_speed:0000000000000000 $t
+     /tmp/cc1YnPsc.s:209    .text.rgblight_decrease_speed:0000000000000000 rgblight_decrease_speed
+     /tmp/cc1YnPsc.s:223    .text.set_keylog:0000000000000000 $t
+     /tmp/cc1YnPsc.s:230    .text.set_keylog:0000000000000000 set_keylog
+     /tmp/cc1YnPsc.s:336    .text.set_keylog:0000000000000050 $d
+     /tmp/cc1YnPsc.s:346    .text.read_keylog:0000000000000000 $t
+     /tmp/cc1YnPsc.s:353    .text.read_keylog:0000000000000000 read_keylog
+     /tmp/cc1YnPsc.s:367    .text.read_keylog:0000000000000004 $d
+     /tmp/cc1YnPsc.s:372    .text.read_keylogs:0000000000000000 $t
+     /tmp/cc1YnPsc.s:379    .text.read_keylogs:0000000000000000 read_keylogs
+     /tmp/cc1YnPsc.s:393    .text.read_keylogs:0000000000000004 $d
+     /tmp/cc1YnPsc.s:424    .rodata.code_to_name:0000000000000000 code_to_name
+     /tmp/cc1YnPsc.s:418    .bss.keylogs_str_idx:0000000000000000 keylogs_str_idx
+     /tmp/cc1YnPsc.s:411    .bss.keylogs_str:0000000000000000 keylogs_str
+     /tmp/cc1YnPsc.s:405    .bss.keylog_str:0000000000000000 keylog_str
+     /tmp/cc1YnPsc.s:406    .bss.keylog_str:0000000000000000 $d
+     /tmp/cc1YnPsc.s:412    .bss.keylogs_str:0000000000000000 $d
+     /tmp/cc1YnPsc.s:414    .bss.keylogs_str_idx:0000000000000000 $d
+
+UNDEFINED SYMBOLS
+snprintf

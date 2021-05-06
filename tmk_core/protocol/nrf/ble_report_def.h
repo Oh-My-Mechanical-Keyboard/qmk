@@ -6,7 +6,7 @@
  * HID Report Descriptors
  ******************************************************************************/
 #ifdef NKRO_ENABLE
-#define NKRO_BYTE_LEN  KEYBOARD_REPORT_SIZE
+#define NKRO_BYTE_LEN  22
 const uint8_t NKROReportMap[] =
 {
     HID_RI_USAGE_PAGE(8, 0x01), /* Generic Desktop */

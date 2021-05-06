@@ -73,6 +73,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #   include "hd44780.h"
 #endif
 
+// #ifdef OLED_DRIVER_ENABLE
+// #   include "oled_driver.h"
+// #endif
+// #ifdef ENCODER_ENABLE
+// #   include "encoder.h"
+// #endif
 __attribute__((weak)) void keyboard_post_init_user() {}
 
 /** \brief keyboard_post_init_kb
@@ -171,6 +177,7 @@ void keyboard_init(void) {
   MCUCR |= _BV(JTD);
 #endif
     matrix_init();
+
 #ifdef PS2_MOUSE_ENABLE
     ps2_mouse_init();
 #endif
@@ -203,6 +210,9 @@ void keyboard_init(void) {
 #if defined(NKRO_ENABLE) && defined(FORCE_NKRO)
     keymap_config.nkro = 1;
 #endif
+// #ifdef OLED_DRIVER_ENABLE
+//     oled_init(OLED_ROTATION_0);
+// #endif
     keyboard_post_init_kb();
 }
 
@@ -231,7 +241,15 @@ void keyboard_task(void)
     uint8_t keys_processed = 0;
 #endif
 
+
+
+
+// #if defined(OLED_DRIVER_ENABLE) && !defined(OLED_DISABLE_TIMEOUT)
+    // uint8_t ret = matrix_scan();
+// #else
     matrix_scan();
+// #endif
+
     if (is_keyboard_master()) {
         for (uint8_t r = 0; r < MATRIX_ROWS; r++) {
             matrix_row = matrix_get_row(r);
@@ -285,6 +303,19 @@ MATRIX_LOOP_END:
     // mousekey repeat & acceleration
     mousekey_task();
 #endif
+
+// #ifdef OLED_DRIVER_ENABLE
+//     // oled_task();
+// #    ifndef OLED_DISABLE_TIMEOUT
+//     // Wake up oled if user is using those fabulous keys!
+//     if (matrix_change) oled_on();
+// #    endif
+// #endif
+
+// #ifdef ENCODER_ENABLE
+//     encoder_read();
+// #endif
+
 
 #ifdef PS2_MOUSE_ENABLE
     ps2_mouse_task();
